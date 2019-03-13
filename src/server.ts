@@ -5,15 +5,21 @@ import dotenv from "dotenv";
 import { InversifyExpressServer } from "inversify-express-utils";
 import { container as ioc } from "./config/ioc/ioc";
 import { Container } from "inversify";
-import DefineUserMiddleware from "./middlewares/DefineUserMiddleware";
 import CheckUserMiddleware from "./middlewares/CheckUserMiddleware";
+import AuthProvider from "./auth/AuthProvider";
 
 class Server {
   private server: InversifyExpressServer;
 
   constructor(container: Container) {
     this.loadEnvironments();
-    this.server = new InversifyExpressServer(container);
+    this.server = new InversifyExpressServer(
+      container,
+      undefined,
+      undefined,
+      undefined,
+      AuthProvider
+    );
   }
 
   private loadEnvironments(): void {

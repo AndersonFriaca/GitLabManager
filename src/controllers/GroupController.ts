@@ -9,7 +9,7 @@ export default class GroupController extends ControllerGen {
   @inject(TYPES.FacGroup)
   private readonly facGroup: FacGroup;
 
-  @httpGet("/", TYPES.DefineUserMiddleware)
+  @httpGet("/")
   async getAll() {
     console.log("controller");
     this.facGroup.findAll();
