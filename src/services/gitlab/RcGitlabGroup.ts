@@ -11,7 +11,7 @@ export default class RcGitLabGroup extends RcGitLabGen<DtoGroup> {
   }
 
   async findAll(): Promise<DtoServiceGenResponse<DtoGroup>> {
-    console.log("service");
+    console.log("Service");
     const response = await this.get("/groups");
     console.log(response.data);
     return response;

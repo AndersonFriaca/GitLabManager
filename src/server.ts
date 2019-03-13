@@ -36,6 +36,12 @@ class Server {
 
   build(): express.Application {
     this.server.setConfig(this.loadConfigExpress);
+    this.server.setErrorConfig(app => {
+      app.use((err, req, res, next) => {
+        console.log("Error Handler Express");
+        res.status(500).send("Something broke!");
+      });
+    });
     return this.server.build();
   }
 }

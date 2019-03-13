@@ -34,6 +34,15 @@ abstract class RcGen<
       httpsAgent,
       headers
     });
+    this.api.interceptors.request.use(
+      this.defineAxiosRequestInterceptorOnFulfilled(),
+      this.defineAxiosRequestInterceptorOnRejected()
+    );
+
+    this.api.interceptors.response.use(
+      this.defineAxiosResponseInterceptorOnFulfilled(),
+      this.defineAxiosResponseInterceptorOnRejected()
+    );
   }
 
   protected getHttpsAgent(): https.Agent {
@@ -48,6 +57,31 @@ abstract class RcGen<
 
   protected getDefaultHeaders(): {} {
     return {};
+  }
+
+  protected defineAxiosRequestInterceptorOnFulfilled<
+    V extends AxiosRequestConfig
+  >(): (value: V) => V | Promise<V> {
+    return undefined;
+  }
+
+  protected defineAxiosRequestInterceptorOnRejected(): (error: any) => any {
+    return undefined;
+  }
+
+  protected defineAxiosResponseInterceptorOnFulfilled<
+    V extends AxiosRequestConfig
+  >(): (value: V) => V | Promise<V> {
+    return undefined;
+  }
+
+  protected defineAxiosResponseInterceptorOnRejected(): (error: any) => any {
+    return error => {
+      console.log("Response Errror Interceptor");
+      if (error.response.status >= 400) {
+        throw new Error("Error Interceptor");
+      }
+    };
   }
 
   protected get api(): AxiosInstance {
@@ -83,12 +117,8 @@ abstract class RcGen<
     url: string,
     options?: AxiosRequestConfig
   ): Promise<ServiceResponse> {
-    try {
-      const response = await this.api.get(url, options);
-      return this.generateServiceResponse(response);
-    } catch (err) {
-      throw err;
-    }
+    const response = await this.api.get(url, options);
+    return this.generateServiceResponse(response);
   }
 }
 

@@ -8,8 +8,8 @@ export default class BoGroup extends BoGen {
   @inject(TYPES.RcGitLabGroup)
   private readonly rcGitLabGroup: RcGitLabGroup;
 
-  findAll() {
-    console.log("business");
-    this.rcGitLabGroup.findAll();
+  async findAll() {
+    console.log("Business");
+    await this.rcGitLabGroup.findAll();
   }
 }

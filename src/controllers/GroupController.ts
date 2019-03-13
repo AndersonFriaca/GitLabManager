@@ -11,7 +11,7 @@ export default class GroupController extends ControllerGen {
 
   @httpGet("/")
   async getAll() {
-    console.log("controller");
-    this.facGroup.findAll();
+    console.log("Controller");
+    await this.facGroup.findAll();
   }
 }

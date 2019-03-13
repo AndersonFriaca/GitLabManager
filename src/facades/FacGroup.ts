@@ -8,8 +8,8 @@ export default class FacGroup extends FacGen {
   @inject(TYPES.BoGroup)
   private readonly boGroup: BoGroup;
 
-  findAll() {
-    console.log("facade");
-    this.boGroup.findAll();
+  async findAll() {
+    console.log("Facade");
+    await this.boGroup.findAll();
   }
 }

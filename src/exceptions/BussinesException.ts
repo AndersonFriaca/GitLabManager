@@ -1,4 +1,3 @@
-import ExceptionGen from "./ExceptionGen";
 import PropServiceMessage from "../properties/PropServiceMessage";
 import HttpException from "./HttpException";
 import PropAlertType from "../properties/PropAlertType";
