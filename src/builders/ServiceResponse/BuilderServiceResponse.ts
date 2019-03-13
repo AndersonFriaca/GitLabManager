@@ -1,6 +1,6 @@
-import DtoGen from "../transports/DtoGen";
+import DtoGen from "../../transports/DtoGen";
 import { AxiosResponse } from "axios";
-import { DtoServiceGenResponse } from "../transports/DtoServiceGenResponse";
+import { DtoServiceGenResponse } from "../../transports/DtoServiceGenResponse";
 
 abstract class BuilderServiceResponse<
   Dto extends DtoGen,

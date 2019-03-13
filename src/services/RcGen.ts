@@ -4,9 +4,9 @@ import { provide } from "../config/ioc/ioc";
 import TYPES from "../config/ioc/types";
 import DtoGen from "../transports/DtoGen";
 import { DtoServiceGenResponse } from "../transports/DtoServiceGenResponse";
-import BuilderServiceResponseGenerator from "../builders/BuilderServiceResponseGenerator";
-import BuilderServiceResponse from "../builders/BuilderServiceResponse";
-import BuilderServiceGenResponse from "../builders/BuilderServiceGenResponse";
+import BuilderServiceResponseGenerator from "../builders/ServiceResponse/BuilderServiceResponseGenerator";
+import BuilderServiceResponse from "../builders/ServiceResponse/BuilderServiceResponse";
+import BuilderServiceGenResponse from "../builders/ServiceResponse/BuilderServiceGenResponse";
 
 @provide(TYPES.RcGen)
 abstract class RcGen<

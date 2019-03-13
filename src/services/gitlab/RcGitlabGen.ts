@@ -4,8 +4,8 @@ import TYPES from "../../config/ioc/types";
 import DtoGen from "../../transports/DtoGen";
 import { DtoServiceGenResponse } from "../../transports/DtoServiceGenResponse";
 import { AxiosResponse } from "axios";
-import BuilderServiceGitLabResponse from "../../builders/BuilderServiceGitLabResponse";
-import BuilderServiceResponse from "../../builders/BuilderServiceResponse";
+import BuilderServiceGitLabResponse from "../../builders/ServiceResponse/BuilderServiceGitLabResponse";
+import BuilderServiceResponse from "../../builders/ServiceResponse/BuilderServiceResponse";
 import RequestHelper from "../../helpers/ioc/RequestHelper";
 
 @provide(TYPES.RcGitlabGen)

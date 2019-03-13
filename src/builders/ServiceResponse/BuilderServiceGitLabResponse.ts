@@ -1,9 +1,9 @@
-import DtoGen from "../transports/DtoGen";
-import { DtoServiceGenResponse } from "../transports/DtoServiceGenResponse";
+import DtoGen from "../../transports/DtoGen";
+import { DtoServiceGenResponse } from "../../transports/DtoServiceGenResponse";
 import BuilderServiceResponse from "./BuilderServiceResponse";
 import { deserialize } from "json-typescript-mapper";
 
-export default class BuilderServiceGenResponse<
+export default class BuilderServiceGitLabResponse<
   Dto extends DtoGen,
   ServiceResponse extends DtoServiceGenResponse<Dto>
 > extends BuilderServiceResponse<Dto, ServiceResponse> {

@@ -1,6 +1,6 @@
 import BuilderServiceResponse from "./BuilderServiceResponse";
-import DtoGen from "../transports/DtoGen";
-import { DtoServiceGenResponse } from "../transports/DtoServiceGenResponse";
+import DtoGen from "../../transports/DtoGen";
+import { DtoServiceGenResponse } from "../../transports/DtoServiceGenResponse";
 
 export default class BuilderServiceResponseGenerator<
   Dto extends DtoGen,
