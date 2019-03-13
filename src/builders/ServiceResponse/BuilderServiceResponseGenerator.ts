@@ -16,12 +16,11 @@ export default class BuilderServiceResponseGenerator<
 
   public constructServiceResponse(): void {
     this.builder
-      .createNewServiceResponse()
       .buildData()
       .buildPaginateObject()
       .buildStatus()
-      .buildAxiosResponse()
-      .buildAdditionals();
+      .buildAdditionals()
+      .createNewServiceResponse();
   }
 
   public getServiceResponse(): ServiceResponse {

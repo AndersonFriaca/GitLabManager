@@ -22,7 +22,7 @@ export default class BuilderServiceGenResponse<
         }
       }
     }
-    this.dtoServiceResponse.data = listData;
+    this.data = listData;
     return this;
   }
 
@@ -31,12 +31,7 @@ export default class BuilderServiceGenResponse<
   }
 
   public buildStatus(): this {
-    this.dtoServiceResponse.status = this.axiosResponse.status;
-    return this;
-  }
-
-  public buildAxiosResponse(): this {
-    this.dtoServiceResponse.axiosResponse = this.axiosResponse;
+    this.status = this.axiosResponse.status;
     return this;
   }
 
@@ -45,7 +40,14 @@ export default class BuilderServiceGenResponse<
   }
 
   public createNewServiceResponse(): this {
-    this.dtoServiceResponse = <ServiceResponse>new DtoServiceGenResponse<Dto>();
+    this.dtoServiceResponse = <ServiceResponse>(
+      new DtoServiceGenResponse<Dto>(
+        this.data,
+        this.status,
+        this.paginate,
+        this.axiosResponse
+      )
+    );
     return this;
   }
 }
