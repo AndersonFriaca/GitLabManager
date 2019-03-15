@@ -77,7 +77,7 @@ abstract class RcGen<
 
   protected defineAxiosResponseInterceptorOnRejected(): (error: any) => any {
     return error => {
-      console.log("Response Errror Interceptor");
+      console.log("Response Error Interceptor");
       if (error.response.status >= 400) {
         throw new Error("Error Interceptor");
       }
