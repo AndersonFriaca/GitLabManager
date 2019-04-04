@@ -1,6 +1,6 @@
-import BuilderServiceResponse from "./BuilderServiceResponse";
-import DtoGen from "../../transports/DtoGen";
-import { DtoServiceGenResponse } from "../../transports/DtoServiceGenResponse";
+import BuilderServiceResponse from './BuilderServiceResponse'
+import DtoGen from '../../transports/DtoGen'
+import { DtoServiceGenResponse } from '../../transports/DtoServiceGenResponse'
 
 export default class BuilderServiceResponseGenerator<
   Dto extends DtoGen,
@@ -8,22 +8,22 @@ export default class BuilderServiceResponseGenerator<
 > {
   private builder: BuilderServiceResponse<Dto, ServiceResponse>;
 
-  public setBuilder(
+  public setBuilder (
     builder: BuilderServiceResponse<Dto, ServiceResponse>
   ): void {
-    this.builder = builder;
+    this.builder = builder
   }
 
-  public constructServiceResponse(): void {
+  public constructServiceResponse (): void {
     this.builder
       .buildData()
       .buildPaginateObject()
       .buildStatus()
       .buildAdditionals()
-      .createNewServiceResponse();
+      .createNewServiceResponse()
   }
 
-  public getServiceResponse(): ServiceResponse {
-    return this.builder.getServiceResponse();
+  public getServiceResponse (): ServiceResponse {
+    return this.builder.getServiceResponse()
   }
 }

@@ -1,3 +1,3 @@
-import Server from "./server";
+import Server from './server'
 
-Server.listen(process.env.port || 3000);
+Server.listen(process.env.port || 3000)

@@ -1,8 +1,8 @@
-import FacGenTypes from "./generics/facades-gen";
+import FacGenTypes from './generics/facades-gen'
 
 const types = {
   ...FacGenTypes,
-  FacGroup: Symbol.for("FacGroup")
-};
+  FacGroup: Symbol.for('FacGroup')
+}
 
-export default types;
+export default types

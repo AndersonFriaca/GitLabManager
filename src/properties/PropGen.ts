@@ -1,3 +1,3 @@
 enum PropGen {}
 
-export default PropGen;
+export default PropGen

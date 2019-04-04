@@ -1,8 +1,8 @@
-import RcGenTypes from "./generics/services-gen";
+import RcGenTypes from './generics/services-gen'
 
 const types = {
   ...RcGenTypes,
-  RcGitLabGroup: Symbol.for("RcGitLabGroup")
-};
+  RcGitLabGroup: Symbol.for('RcGitLabGroup')
+}
 
-export default types;
+export default types

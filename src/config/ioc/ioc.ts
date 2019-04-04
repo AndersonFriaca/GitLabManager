@@ -1,19 +1,19 @@
-import { Container, inject, interfaces } from "inversify";
+import { Container, inject } from 'inversify'
 import {
   fluentProvide,
   buildProviderModule,
   provide
-} from "inversify-binding-decorators";
-import "./loader";
+} from 'inversify-binding-decorators'
+import './loader'
 
-const container = new Container();
+const container = new Container()
 
 const provideSingleton = (identifier: any) => {
   return fluentProvide(identifier)
     .inSingletonScope()
-    .done(true);
-};
+    .done(true)
+}
 
-container.load(buildProviderModule());
+container.load(buildProviderModule())
 
-export { container, provide, provideSingleton, inject };
+export { container, provide, provideSingleton, inject }

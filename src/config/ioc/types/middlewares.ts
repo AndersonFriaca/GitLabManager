@@ -1,8 +1,8 @@
-import MiddlewareGenTypes from "./generics/middlewares-gen";
+import MiddlewareGenTypes from './generics/middlewares-gen'
 
 const types = {
   ...MiddlewareGenTypes,
-  DefineUserMiddleware: Symbol.for("DefineUserMiddleware")
-};
+  DefineUserMiddleware: Symbol.for('DefineUserMiddleware')
+}
 
-export default types;
+export default types

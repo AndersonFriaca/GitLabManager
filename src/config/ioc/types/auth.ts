@@ -1,5 +1,5 @@
 const types = {
-  AuthProvider: Symbol.for("AuthProvider")
-};
+  AuthProvider: Symbol.for('AuthProvider')
+}
 
-export default types;
+export default types

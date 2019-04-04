@@ -1,5 +1,3 @@
-import ServiceException from "./ServiceException";
+import ServiceException from './ServiceException'
 
-export default class ServiceGitLabException extends ServiceException {
-  
-}
+export default class ServiceGitLabException extends ServiceException {}

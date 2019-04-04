@@ -1,7 +1,7 @@
 const enum PropServiceMessage {
-  ERRO_INTERNO = "Ocorreu um erro interno",
-  SERVICO_INDISPONIVEL = "Serviço indisponível",
-  DADOS_INVALIDOS = "Dados inválidos"
+  ERRO_INTERNO = 'Ocorreu um erro interno',
+  SERVICO_INDISPONIVEL = 'Serviço indisponível',
+  DADOS_INVALIDOS = 'Dados inválidos'
 }
 
-export default PropServiceMessage;
+export default PropServiceMessage

@@ -1,5 +1,5 @@
 const types = {
-  RequestHelper: Symbol.for("RequestHelper")
-};
+  HpRequest: Symbol.for('HpRequest')
+}
 
-export default types;
+export default types

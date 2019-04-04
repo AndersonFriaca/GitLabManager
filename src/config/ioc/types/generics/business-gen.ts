@@ -1,5 +1,5 @@
 const types = {
-  BoGen: Symbol.for("BoGen"),
-};
+  BoGen: Symbol.for('BoGen')
+}
 
-export default types;
+export default types

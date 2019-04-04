@@ -1,3 +1,3 @@
 abstract class DtoGen {}
 
-export default DtoGen;
+export default DtoGen

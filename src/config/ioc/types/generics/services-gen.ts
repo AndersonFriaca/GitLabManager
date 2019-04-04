@@ -1,6 +1,6 @@
 const types = {
-  RcGen: Symbol.for("RcGen"),
-  RcGitlabGen: Symbol.for("RcGitLabGen")
-};
+  RcGen: Symbol.for('RcGen'),
+  RcGitlabGen: Symbol.for('RcGitLabGen')
+}
 
-export default types;
+export default types

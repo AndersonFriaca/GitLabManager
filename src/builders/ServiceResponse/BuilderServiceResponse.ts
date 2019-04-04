@@ -1,6 +1,6 @@
-import DtoGen from "../../transports/DtoGen";
-import { AxiosResponse } from "axios";
-import { DtoServiceGenResponse, IServiceResponsePaginate } from "../../transports/DtoServiceGenResponse";
+import DtoGen from '../../transports/DtoGen'
+import { AxiosResponse } from 'axios'
+import { DtoServiceGenResponse, IServiceResponsePaginate } from '../../transports/DtoServiceGenResponse'
 
 abstract class BuilderServiceResponse<
   Dto extends DtoGen,
@@ -13,12 +13,12 @@ abstract class BuilderServiceResponse<
   protected status: number;
   protected paginate: IServiceResponsePaginate;
 
-  constructor(
+  constructor (
     axiosResponse: AxiosResponse<Dto | Dto[]>,
     classToDeserialize: new () => Dto
   ) {
-    this.axiosResponse = axiosResponse;
-    this.classToDeserialize = classToDeserialize;
+    this.axiosResponse = axiosResponse
+    this.classToDeserialize = classToDeserialize
   }
 
   public abstract createNewServiceResponse(): this;
@@ -31,9 +31,9 @@ abstract class BuilderServiceResponse<
 
   public abstract buildAdditionals(): this;
 
-  public getServiceResponse(): ServiceResponse {
-    return this.dtoServiceResponse;
+  public getServiceResponse (): ServiceResponse {
+    return this.dtoServiceResponse
   }
 }
 
-export default BuilderServiceResponse;
+export default BuilderServiceResponse

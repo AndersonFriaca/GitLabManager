@@ -1,5 +1,5 @@
 const types = {
-  FacGen: Symbol.for("FacGen")
-};
+  FacGen: Symbol.for('FacGen')
+}
 
-export default types;
+export default types
